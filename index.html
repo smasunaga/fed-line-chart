@@ -164,6 +164,7 @@
         .append('g')
         .attr("class", "disease")
 
+      // draws the lines and also adds the tooltip
       disease.append("path")
         .attr("class", "line")
         .attr("stroke-width", "4")
@@ -171,14 +172,6 @@
         .style("stroke", function(d) { return color(d.name); })
         .on('mouseover', tip.show)
         .on('mouseout', tip.hide);         
-
-      // disease.append("text")
-      //   .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
-      //   .attr("transform", function(d) { return "translate(" + xScale(d.value.year) + "," + yScale(d.value.funding) + ")"; })
-      //   .attr("x", 2)
-      //   .attr("dy", ".35em")
-      //   .text(function(d) { return d.name; });
-
 
     });
 
